@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TwitterClone.Domain.Entities
 {
-    public class Like : BaseEntity
+    public class Bookmark : BaseEntity
     {
         private Guid _userId;
         private Guid _tweetId;
 
-        public Like() : base(Guid.NewGuid())
+        public Bookmark() : base(Guid.NewGuid())
         {
         }
 

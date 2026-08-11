@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace TwitterClone.Domain.Entities
 {
-    public class Like : BaseEntity
+    public class Retweet : BaseEntity
     {
         private Guid _userId;
         private Guid _tweetId;
+        private string _comment;
 
-        public Like() : base(Guid.NewGuid())
+        public Retweet() : base(Guid.NewGuid())
         {
         }
 
@@ -27,10 +28,16 @@ namespace TwitterClone.Domain.Entities
             set { _tweetId = value; }
         }
 
+        public string Comment
+        {
+            get { return _comment; }
+            set { _comment = value; }
+        }
+
         public override string DescribeRecord()
         {
             var baseRecord = base.DescribeRecord();
-            return $"{baseRecord}, UserId: {UserId}, TweetId: {TweetId}";
+            return $"{baseRecord}, UserId: {UserId}, TweetId: {TweetId}, Comment: {Comment}";
         }
     }
 }
