@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TwitterClone.Domain.Entities
 {
-    public class LikeNotification : Notification
+    public sealed class LikeNotification : Notification
     {
+
         public LikeNotification(Guid likeByUserId) : base("Like")
         {
             LikeByUserId = likeByUserId;
@@ -19,6 +20,8 @@ namespace TwitterClone.Domain.Entities
         {
             Message = message;
         }
+
+       
 
         public override string GetMessage()
         {

@@ -1,9 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace TwitterClone.Domain.Entities
 {
     public class Message : BaseEntity
@@ -16,6 +10,7 @@ namespace TwitterClone.Domain.Entities
 
         public Message() : base(Guid.NewGuid())
         {
+
         }
 
         public Guid SenderId
