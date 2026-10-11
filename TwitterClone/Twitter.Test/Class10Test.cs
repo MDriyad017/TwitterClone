@@ -15,7 +15,7 @@ namespace Twitter.Test
 
             Console.WriteLine(likeableTweet.CanBeLiked());
 
-            //var maxTweetLength = 200;
+            var maxTweetLength = 200;
         }
     }
 }
