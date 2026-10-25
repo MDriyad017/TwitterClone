@@ -1,9 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace TwitterClone.Domain.Entities
 {
     public class Bookmark : BaseEntity
@@ -13,6 +7,7 @@ namespace TwitterClone.Domain.Entities
 
         public Bookmark() : base(Guid.NewGuid())
         {
+
         }
 
         public Guid UserId
