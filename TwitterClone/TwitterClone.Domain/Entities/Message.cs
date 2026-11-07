@@ -43,6 +43,10 @@ namespace TwitterClone.Domain.Entities
             set { _isRead = value; }
         }
 
+        // Navigation Properties
+        public User Sender { get; set; }
+        public User Receiver { get; set; }
+
         public override string DescribeRecord()
         {
             var baseRecord = base.DescribeRecord();

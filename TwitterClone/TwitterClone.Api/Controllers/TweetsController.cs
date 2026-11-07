@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TwitterClone.Application.Dtos;
 using TwitterClone.Application.Interfaces;
@@ -8,6 +9,7 @@ namespace TwitterClone.Api.Controllers
     // api/tweets
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TweetsController : ControllerBase
     {
 
@@ -18,7 +20,6 @@ namespace TwitterClone.Api.Controllers
         {
             _tweetService = tweetService;
         }
-
 
         // GET /api/tweets?userId={userId}
         [HttpGet]
