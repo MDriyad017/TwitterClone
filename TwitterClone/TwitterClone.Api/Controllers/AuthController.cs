@@ -10,7 +10,7 @@ namespace TwitterClone.Api.Controllers
     // api/users
     [Route("api/[controller]")]
     [ApiController]
-    // [Authorize]
+    [Authorize]
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
@@ -21,8 +21,8 @@ namespace TwitterClone.Api.Controllers
             _authService = authService;
         }
 
-
         [HttpPost("/login")]
+        [AllowAnonymous]
         public IActionResult Login([FromBody] LoginDto loginDto)
         {
             var authResponse = _authService.Login(loginDto);

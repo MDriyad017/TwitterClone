@@ -22,6 +22,10 @@ namespace TwitterClone.Domain.Entities
             set { _followingId = value; }
         }
 
+        // Navigation Properties
+        public User Follower { get; set; }
+        public User Following { get; set; }
+
         public override string DescribeRecord()
         {
             var baseRecord = base.DescribeRecord();
